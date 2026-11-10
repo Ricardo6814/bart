@@ -1,0 +1,138 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+body {
+    font-family: Arial, sans-serif;
+    background: #F1F3F5;
+    color: #17191D;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENU LATERAL */
+aside {
+    width: 250px;
+    background: #17191D;
+    color: white;
+    padding: 25px 15px;
+}
+
+.logo {
+    color: #2878E8;
+    font-size: 22px;
+    margin: 0 10px 35px;
+}
+
+nav a {
+    display: block;
+    padding: 14px;
+    margin-bottom: 6px;
+    color: #C5CAD1;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #2878E8;
+    color: white;
+}
+
+/* ÁREA PRINCIPAL */
+.main {
+    flex: 1;
+    min-width: 0;
+}
+
+header {
+    background: white;
+    padding: 22px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content {
+    padding: 35px;
+}
+
+/* CAMINHO DE NAVEGAÇÃO */
+.breadcrumb {
+    margin-bottom: 25px;
+    color: #737B87;
+    font-size: 14px;
+}
+
+.breadcrumb span {
+    color: #2878E8;
+}
+
+/* PÁGINAS */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fade 0.3s ease;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px #00000008;
+}
+
+.card p {
+    margin-top: 10px;
+    color: #737B87;
+}
+
+/* ANIMAÇÃO */
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 650px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
